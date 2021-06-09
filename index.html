@@ -6,10 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="css/mystyles.css">
 
     <title>Proyecto Comics</title>
 </head>
-<body>
+<body class="body-background-color">
     
     <section class="hero is-success is-halfheight img">
         <div class="hero-body">      
@@ -17,39 +18,45 @@
     </section>
 
     <main id="container" class="container">
-        <nav class="navbar my-5" role="navigation" aria-label="main navigation">
+        <nav class="navbar my-5 box" role="navigation" aria-label="main navigation">
             <div id="navbarBasicExample" class="navbar-menu">
-                <label for="">Búsqueda</label>
-                <input id="search" class="input is-expanded is-half" type="text" placeholder="Ingresa tu búsqueda">
+                <!-- input buscar -->
               <div class="navbar-start">
-                <div class="navbar-item has-dropdown is-hoverable">
-                  <a class="navbar-link">
+                <label class="label title is-4 navbar-item" for="search">Búsqueda</label>
+                <div class="navbar-item">
+                  <input id="search" class="input ml-4 input-background-color input-focus-box-shadow-color" type="text" placeholder="Ingresa tu búsqueda">
+                </div>
+              </div>
+              <div class="navbar-end is-align-items-center">
+                <!-- select tipo -->
+                <div class="navbar-item has-dropdown is-hoverable mx-4 select">
+                  <label for="type" class="label">
                     Tipo
-                  </a >
-                  <select name="type" id="type" class="select select-busq">
+                  </label >
+                  <select name="type" id="type" class="ml-2">
                     <option value="comics">Comics</option>
                     <option value="characters">Personaje</option>
                   </select> 
                   </div>
-                <div class="navbar-item has-dropdown is-hoverable">
-                  <a class="navbar-link">
+                <!--select order  -->
+                <div class="navbar-item has-dropdown is-hoverable mx-4 select">
+                  <label for="order" class="label">
                     Orden
-                  </a>
-                  <select name="order" id="order" class="select select-busq">
+                  </label>
+                  <select name="order" id="order" class="ml-2 is-link">
                     <option value="name">A-Z</option>
                     <option value="-name">Z-A</option>
                   </select>                  
                 </div>
               </div>
-              <div class="navbar-end">
-                <div class="navbar-item">
-                  <div class="buttons">
-                    <a id="search-btn"  class="button is-light">
+              <!-- boton buscar -->
+                <div class="mx-4 is-flex is-align-items-center">
+                  <div class="">
+                    <a id="search-btn"  class="button is-link is-light">
                       Buscar
                     </a>
                   </div>
                 </div>
-              </div>
             </div>
           </nav>
          <div id="root" class="columns is-flex-wrap-wrap">

@@ -1,0 +1,25 @@
+{
+  "name": "proyecto-comics",
+  "version": "1.0.0",
+  "description": "sass para proyecto modulo 06",
+  "main": "index.js",
+  "scripts": {
+    "css-build": "node-sass --omit-source-map-url sass/mystyles.scss css/mystyles.css",
+    "css-watch": "npm run css-build -- --watch",
+    "start": "npm run css-watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/agustinasc/proyecto-comics.git"
+  },
+  "author": "Agus  y Sa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/agustinasc/proyecto-comics/issues"
+  },
+  "homepage": "https://github.com/agustinasc/proyecto-comics#readme",
+  "devDependencies": {
+    "bulma": "^0.9.2",
+    "node-sass": "^6.0.0"
+  }
+}
